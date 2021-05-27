@@ -26,7 +26,7 @@ $(document).ready(function () {
     }
   );
 
-  $(".js--section-synopsis").waypoint(
+  $(".js--section-why").waypoint(
     function (direction) {
       if (direction == "down") {
         $(".about-us").addClass("underline");
@@ -53,13 +53,13 @@ $(document).ready(function () {
     }
   );
 
-  $(".js--section-symptoms").waypoint(
+  $(".js--section-food").waypoint(
     function (direction) {
       if (direction == "down") {
-        $(".symptoms").addClass("underline");
+        $(".food").addClass("underline");
       }
       if (direction == "up") {
-        $(".symptoms").removeClass("underline");
+        $(".food").removeClass("underline");
       }
     },
     {
@@ -67,15 +67,15 @@ $(document).ready(function () {
     }
   );
 
-  $(".js--section-cause").waypoint(
+  $(".js--section-sleep").waypoint(
     function (direction) {
       if (direction == "down") {
-        $(".symptoms").removeClass("underline");
-        $(".causes").addClass("underline");
+        $(".food").removeClass("underline");
+        $(".sleep").addClass("underline");
       }
       if (direction == "up") {
-        $(".symptoms").addClass("underline");
-        $(".causes").removeClass("underline");
+        $(".food").addClass("underline");
+        $(".sleep").removeClass("underline");
       }
     },
     {
@@ -83,15 +83,75 @@ $(document).ready(function () {
     }
   );
 
-  $(".js--section-effect").waypoint(
+  $(".sp-1").waypoint(
     function (direction) {
       if (direction == "down") {
-        $(".causes").removeClass("underline");
-        $(".effect").addClass("underline");
+        $(".sp-1").css("left", "0%");
       }
       if (direction == "up") {
-        $(".causes").addClass("underline");
-        $(".effect").removeClass("underline");
+        $(".sp-1").css("left", "-3.75%");
+      }
+    },
+    {
+      offset: "50%",
+    }
+  );
+  $(".sp-2").waypoint(
+    function (direction) {
+      if (direction == "down") {
+        $(".sp-2").css("transform", "translate(118.25%, 0)");
+        $(".sp-1").css("left", "-3.75%");
+      }
+      if (direction == "up") {
+        $(".sp-2").css("transform", "translate(125%, 0)");
+        $(".sp-1").css("left", "0%");
+      }
+    },
+    {
+      offset: "50%",
+    }
+  );
+  $(".sp-3").waypoint(
+    function (direction) {
+      if (direction == "down") {
+        $(".sp-3").css("left", "0");
+        $(".sp-2").css("transform", "translate(125%, 0)");
+      }
+      if (direction == "up") {
+        $(".sp-3").css("left", "-3.75%");
+        $(".sp-2").css("transform", "translate(118.25%, 0)");
+      }
+    },
+    {
+      offset: "50%",
+    }
+  );
+
+  $(".js--section-thinking").waypoint(
+    function (direction) {
+      if (direction == "down") {
+        $(".sp-3").css("left", "0");
+      }
+      if (direction == "up") {
+        $(".sp-3  ").css("left", "-3.75%");
+      }
+    },
+    {
+      offset: "50%",
+    }
+  );
+
+  $(".js--section-thinking").waypoint(
+    function (direction) {
+      if (direction == "down") {
+        $(".sleep").removeClass("underline");
+        $(".sleep-para").css("left", "-7.5%");
+        $(".thinking").addClass("underline");
+      }
+      if (direction == "up") {
+        $(".sleep").addClass("underline");
+        $(".sleep-para").css("left", "0");
+        $(".thinking").removeClass("underline");
       }
     },
     {
@@ -99,15 +159,15 @@ $(document).ready(function () {
     }
   );
 
-  $(".js--section-solution").waypoint(
+  $(".js--section-medium").waypoint(
     function (direction) {
       if (direction == "down") {
-        $(".effect").removeClass("underline");
-        $(".solution").addClass("underline");
+        $(".thinking").removeClass("underline");
+        $(".medium").addClass("underline");
       }
       if (direction == "up") {
-        $(".effect").addClass("underline");
-        $(".solution").removeClass("underline");
+        $(".thinking").addClass("underline");
+        $(".medium").removeClass("underline");
       }
     },
     {
@@ -115,81 +175,81 @@ $(document).ready(function () {
     }
   );
 
-  $(".js--solution-support-1").waypoint(
+  $(".js--medium-support-1").waypoint(
     function (direction) {
       if (direction == "down") {
-        $(".js--solution-support-1").addClass("solution-support-ls-hover");
+        $(".js--medium-support-1").addClass("medium-support-ls-hover");
       }
       if (direction == "up") {
-        $(".js--solution-support-1").removeClass("solution-support-ls-hover");
+        $(".js--medium-support-1").removeClass("medium-support-ls-hover");
       }
     },
     {
       offset: "50%",
     }
   );
-  $(".js--solution-support-2").waypoint(
+  $(".js--medium-support-2").waypoint(
     function (direction) {
       if (direction == "down") {
-        $(".js--solution-support-2").addClass("solution-support-rs-hover");
-        $(".js--solution-support-1").removeClass("solution-support-ls-hover");
+        $(".js--medium-support-2").addClass("medium-support-rs-hover");
+        $(".js--medium-support-1").removeClass("medium-support-ls-hover");
       }
       if (direction == "up") {
-        $(".js--solution-support-2").removeClass("solution-support-rs-hover");
-        $(".js--solution-support-1").addClass("solution-support-ls-hover");
+        $(".js--medium-support-2").removeClass("medium-support-rs-hover");
+        $(".js--medium-support-1").addClass("medium-support-ls-hover");
       }
     },
     {
       offset: "50%",
     }
   );
-  $(".js--solution-support-3").waypoint(
+  $(".js--medium-support-3").waypoint(
     function (direction) {
       if (direction == "down") {
-        $(".js--solution-support-3").addClass("solution-support-ls-hover");
-        $(".js--solution-support-2").removeClass("solution-support-rs-hover");
+        $(".js--medium-support-3").addClass("medium-support-ls-hover");
+        $(".js--medium-support-2").removeClass("medium-support-rs-hover");
       }
       if (direction == "up") {
-        $(".js--solution-support-3").removeClass("solution-support-ls-hover");
-        $(".js--solution-support-2").addClass("solution-support-rs-hover");
+        $(".js--medium-support-3").removeClass("medium-support-ls-hover");
+        $(".js--medium-support-2").addClass("medium-support-rs-hover");
       }
     },
     {
       offset: "50%",
     }
   );
-  $(".js--solution-support-4").waypoint(
+  $(".js--medium-support-4").waypoint(
     function (direction) {
       if (direction == "down") {
-        $(".js--solution-support-4").addClass("solution-support-rs-hover");
-        $(".js--solution-support-3").removeClass("solution-support-ls-hover");
+        $(".js--medium-support-4").addClass("medium-support-rs-hover");
+        $(".js--medium-support-3").removeClass("medium-support-ls-hover");
       }
       if (direction == "up") {
-        $(".js--solution-support-4").removeClass("solution-support-rs-hover");
-        $(".js--solution-support-3").addClass("solution-support-ls-hover");
+        $(".js--medium-support-4").removeClass("medium-support-rs-hover");
+        $(".js--medium-support-3").addClass("medium-support-ls-hover");
       }
     },
     {
       offset: "50%",
     }
   );
-  
-  $(".js--solution-conclusion").waypoint(
+
+  $(".js--medium-conclusion").waypoint(
     function (direction) {
       if (direction == "down") {
-        $(".js--solution-conclusion").addClass("solution-conclusion-hover");
-        $(".js--solution-support-4").removeClass("solution-support-rs-hover");
+        $(".js--medium-conclusion").addClass("medium-conclusion-hover");
+        $(".js--medium-support-4").removeClass("medium-support-rs-hover");
       }
       if (direction == "up") {
-        $(".js--solution-conclusion").removeClass("solution-conclusion-hover");
-        $(".js--solution-support-4").addClass("solution-support-rs-hover");
+        $(".js--medium-conclusion").removeClass("medium-conclusion-hover");
+        $(".js--medium-support-4").addClass("medium-support-rs-hover");
       }
     },
     {
       offset: "50%",
     }
   );
-  
+
   /*
     $('.nav-section').ready(function () {
         var deviceWidth = $(window).width();

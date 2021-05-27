@@ -33,18 +33,18 @@ body {
 /*────────────────── 
      Scrollbar
 ──────────────────*/
-::-webkit-Scrollbar{
-  width: 5px; 
-background: rgba(5,5,5,1);
+::-webkit-scrollbar {
+  width: 10px;
+  background: rgba(5, 5, 5, 1);
 }
-::-webkit-Scrollbar-thumb{
-border-radius: 10px;
-background: black;
-box-shadow: inset 0 0 20px rgba(245, 245, 245, 0.671);
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #00ff19;
+  box-shadow: inset 0 0 20px rgba(245, 245, 245, 0.671);
 }
-::-webkit-Scrollbar-track{
-margin-top: 80px;
-border-radius: 10px;
+::-webkit-scrollbar-track {
+  margin-top: 55px;
+  border-radius: 10px;
 }
 
 /*---------------------------------------*/
@@ -140,11 +140,12 @@ a {
 }
 
 #section-cover h2,
-.section-cause h2,
-.section-symptoms h2,
-.section-effect h2,
-.section-solution h2,
-.footer-title {
+.section-sleep h2,
+.section-food h2,
+.section-sleep h2,
+.section-medium h2,
+.footer-title,
+.section-thinking h2 {
   width: fit-content;
   font-size: 240%;
   font-weight: 600;
@@ -154,24 +155,26 @@ a {
   transition: all 0.2s;
 }
 
-.section-cause h2,
+.section-sleep h2,
 #section-cover h2,
-.section-symptoms h2,
-.section-effect h2,
-.section-solution h2 {
+.section-food h2,
+.section-sleep h2,
+.section-medium h2,
+.section-thinking h2 {
   border-color: #00ff19;
 }
 
 #section-cover h2:hover,
 .footer-title:hover,
-.section-cause h2:hover,
-.section-symptoms h2:hover,
-.section-effect h2:hover,
-.section-solution h2:hover {
+.section-sleep h2:hover,
+.section-food h2:hover,
+.section-sleep h2:hover,
+.section-medium h2:hover,
+.section-thinking h2:hover {
   transform: scale(1.05);
 }
 
-#section-synopsis h2 {
+#section-why h2 {
   width: fit-content;
   position: relative;
   height: 110px;
@@ -189,12 +192,12 @@ a {
   transition: all 0.2s;
 }
 
-#section-synopsis h2:hover {
+.section-thinking h2r {
   transform: translateX(-52.5%);
 }
 
-#section-synopsis-detail h2,
-.solution-h2 {
+#section-why-detail h2,
+.medium-h2 {
   width: fit-content;
   position: relative;
   display: block;
@@ -211,9 +214,9 @@ a {
   transition: all 0.2s;
 }
 
-#section-synopsis-detail h2:hover,
-.solution-h2:hover {
-  transform: translateX(52.5%);
+#section-why h2:hover,
+.medium-h2:hover {
+  transform: translateX(-52.5%);
 }
 
 .section-youtube h2 {
@@ -250,7 +253,7 @@ a {
 header {
   height: 100vh;
   background-image: linear-gradient(
-      to left,
+      to right,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0),
@@ -258,29 +261,40 @@ header {
       rgba(255, 255, 255, 0.9),
       rgba(255, 255, 255, 0.9)
     ),
-    url(img/depression.jpg);
+    url(img/mental-health.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   z-index: 10;
 }
 
 .hero-box {
   width: 50%;
-  float: left;
+  float: right;
   font-family: "Poppins", sans-serif;
-  padding-left: 3%;
+  padding-right: 3%;
   margin: 0;
   position: relative;
   top: 40%;
   transform: translate(0%, -50%);
   font-size: 120%;
+  text-align: right;
+}
+
+.hero-box h2 {
+  font-size: 175%;
+  text-align: right;
 }
 
 .hero-box p {
   float: right;
   margin-top: -20px;
-  margin-right: 11%;
+  margin-right: 3%;
+}
+
+.btn-box {
+  position: relative;
+  right: 0;
 }
 
 .btn-discover:link,
@@ -296,9 +310,11 @@ header {
   text-align: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  float: left;
-  -webkit-transform-origin: top left;
-  transform-origin: top left;
+  position: relative;
+  top: 20px;
+  right: -18%;
+  -webkit-transform-origin: top right;
+  transform-origin: top right;
 }
 
 .btn-discover:hover,
@@ -329,16 +345,16 @@ nav {
 }
 
 .nav-section {
-  float: right;
   margin: 0;
   list-style: none;
   position: absolute;
   right: 1%;
-  width: 100%;
+  width: 100vw;
   height: 55px;
   position: absolute;
   top: 0;
-  display: inline-block;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .nav-section li {
@@ -476,9 +492,28 @@ nav {
       rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 1)
     ),
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
     url(img/cover.jpg);
   background-size: cover;
-  background-position: right;
+  background-position: center;
   background-repeat: no-repeat;
   -webkit-box-shadow: 0 0px 10px 0px rgba(32, 33, 36, 0.75);
   box-shadow: 0 0px 10px 0px rgba(32, 33, 36, 0.75);
@@ -506,57 +541,40 @@ nav {
   transform: scale(1.05);
 }
 
-/*----------------------------------------------- SECTION-synopsis  ---------------------------------------------------*/
+/*----------------------------------------------- SECTION-why  ---------------------------------------------------*/
 
-#section-synopsis {
+#section-why {
   width: 100%;
   padding: 30px 12.5%;
   z-index: 20;
 }
 
-#section-synopsis div:first-child div {
+#section-why div:first-child div {
   padding-top: 32px;
 }
 
-#synopsis-svg {
+#why-svg {
   width: 255px;
   height: 108px;
   margin-top: -24px;
   float: right;
 }
 
-.synopsis-para-row {
-  background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0),
-      rgba(255, 255, 255, 0.75),
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 1)
-    ),
-    url(img/synopsis.jpg);
+.why-para-row {
+  background-image: url(img/causes.jpg);
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
+  min-height: 25vh;
 }
 
-.synopsis-para-row div {
+.why-para-row div {
   float: right;
 }
 
-/*----------------------------------------------- SECTION-synopsis-detail  ---------------------------------------------------*/
+/*----------------------------------------------- SECTION-why-detail  ---------------------------------------------------*/
 
-#section-synopsis-detail {
+#section-why-detail {
   padding: 30px 2.5%;
   width: 90%;
   background: #4fc6fc;
@@ -569,7 +587,7 @@ nav {
   text-align: center;
 }
 
-#section-synopsis-detail img {
+#section-why-detail img {
   display: block;
   width: 100px;
   height: 100px;
@@ -606,28 +624,28 @@ nav {
   padding: 30px;
 }
 
-/*----------------------------------------------- SECTION-Symptoms,cause,effect  ---------------------------------------------------*/
+/*----------------------------------------------- SECTION-food,sleep,sleep  ---------------------------------------------------*/
 
-.section-cause,
-.section-symptoms {
+.section-sleep,
+.section-food {
   padding: 55px 2.5%;
   box-shadow: 0px 21px 10px -18px rgba(32, 33, 36, 0.75) inset;
 }
 
-#section-cause-link,
-#section-symptoms-link,
-#section-effect-link {
+#section-food-link,
+#section-sleep-link,
+#section-thinking-link {
   margin-top: 0 !important;
   box-shadow: 0 0px 10px 2px rgba(32, 33, 36, 0.75);
   z-index: 10;
 }
-#section-symptoms-link,
-#section-effect-link {
+#section-food-link,
+#section-sleep-link {
   height: 54px;
 }
 
-.section-cause div li h3,
-.section-effect h3 {
+.section-sleep div li h3,
+.section-sleep h3 {
   width: fit-content;
   margin: 30px 0 15px 0;
   padding: 0 10px 0 0;
@@ -635,99 +653,77 @@ nav {
   transition: all 0.2s;
 }
 
-.section-cause div li h3:hover,
-.section-effect h3:hover {
+.section-sleep div li h3:hover,
+.section-sleep h3:hover {
   border-color: #00ff19;
 }
 
-/*----------------------------------------------- SECTION-SYMPTOMS  ---------------------------------------------------*/
+/*----------------------------------------------- SECTION-food  ---------------------------------------------------*/
 
-.section-symptoms {
+.section-food {
   background-image: linear-gradient(
-      to left,
+      to right,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0),
-      rgba(34, 34, 34, 0.75),
-      rgba(34, 34, 34, 0.9),
-      rgba(34, 34, 34, 0.9),
-      rgba(34, 34, 34, 1),
-      rgba(34, 34, 34, 1)
+      rgba(17, 17, 17, 0.75),
+      rgba(17, 17, 17, 0.9),
+      rgba(17, 17, 17, 0.9),
+      rgba(17, 17, 17, 1),
+      rgb(17, 17, 17)
     ),
-    url(img/Symptoms.png);
+    url(img/food.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-position: right;
   color: #fff;
 }
 
-.section-symptoms div li {
-  margin: 10px 0 0 0;
-}
-
-.section-symptoms div li:first-child {
-  margin-top: 30px;
-}
-
-/*----------------------------------------------- SECTION-CAUSE  ---------------------------------------------------*/
-
-.section-cause {
-  background-image: url(img/causes.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
-.section-cause div {
+.section-food div {
   position: relative;
+  float: right;
   text-align: right;
-  height: fit-content;
-  padding: 55px;
-  width: 58%;
-  left: 48%;
-  border-radius: 31px;
-  background-color: #fff;
-  transform: translate(-50%, 0);
-  text-align: center;
-  box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.26);
 }
 
-.section-cause div img {
-  transform-origin: center;
-  transition: all 0.3s;
-}
+/*----------------------------------------------- SECTION-sleep  ---------------------------------------------------*/
 
-.section-cause div img:hover {
-  transform: scale(1.05);
-}
-
-/*----------------------------------------------- SECTION-EFFECT  ---------------------------------------------------*/
-
-.section-effect {
+.section-sleep {
   padding: 0px;
-}
-
-.effect-1 {
-  box-shadow: 0px 21px 10px -18px rgba(32, 33, 36, 0.75) inset;
-  background-image: linear-gradient(
-      to left,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0),
-      rgba(255, 255, 255, 0.75),
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 1)
-    ),
-    url(img/effect.jpg);
+  background-image: url(img/sleep-1.jpg);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: 0px 21px 10px -18px rgba(32, 33, 36, 0.75) inset;
+  padding: 55px 2.5% 55px 0;
 }
 
-.effect-2 {
-  box-shadow: 0px -11px 10px -18px rgba(0, 0, 0, 0.75) inset;
+.sleep-para {
+  width: 50%;
+  margin: 25px 0 0 0;
+  position: relative;
+  background-color: #fff;
+  transition: all 0.3s;
+  box-shadow: 0 0px 10px 0px rgba(32, 33, 36, 0.75);
+}
+
+.sp-ls {
+  left: 0%;
+  padding: 27.5px 3.25% 27.5px 6%;
+}
+
+.sp-rs {
+  padding: 27.5px 13% 27.5px 3.25%;
+  position: relative;
+  right: 0;
+  transform: translate(125%, 0);
+}
+
+/*----------------------------------------------- SECTION-thinking  ---------------------------------------------------*/
+
+.section-thinking {
+  padding: 0px;
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0),
@@ -739,173 +735,100 @@ nav {
       rgba(255, 255, 255, 1),
       rgba(255, 255, 255, 1)
     ),
-    url(img/effect-2.jpg);
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.25),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 1)
+    ),
+    url(img/thinking.jpg);
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
-  text-align: right;
+  padding: 55px 2.5%;
 }
 
-.effect-ls {
-  width: 100%;
+.thinking-para {
+  width: 50%;
   margin: 0;
-  padding: 55px 2.5% 0px 2.5%;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(255, 255, 255, 0.25),
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.75),
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 1)
-  );
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
-
-.effect-rs {
-  width: 100%;
-  margin: 0;
-  padding: 0px 2.5% 55px 2.5%;
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(255, 255, 255, 0.25),
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.75),
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 1)
-  );
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
-  text-align: right;
-}
-.effect-rs div {
+  position: relative;
   float: right;
+  text-align: right;
 }
 
-.effect-sep {
-  width: 100%;
-  height: 55px;
-}
+/*----------------------------------------------- SECTION-medium  ---------------------------------------------------*/
 
-/*----------------------------------------------- SECTION-SOLUTION  ---------------------------------------------------*/
-
-.section-solution {
+.section-medium {
   background-color: rgb(255, 250, 250);
-  box-shadow: 0 0px 10px 2px rgba(32, 33, 36, 0.75);
   padding: 55px 0%;
 }
 
-#solution-main-para {
+#medium-main-para {
   width: 62.5%;
   margin: 0 auto;
   text-align: center;
 }
 
-.solution-para-container {
+.medium-para-container {
   margin: 55px 0 0 0;
   background-color: #181818;
   padding: 55px 0%;
   position: relative;
 }
 
-.solution-para-container:first-child {
+.medium-para-container:first-child {
   margin-top: 55px;
 }
 
-.solution-support-1,
-.solution-support-3 {
+.medium-support-1,
+.medium-support-3 {
   background-color: #fff;
   width: 85%;
   margin: 0;
@@ -918,18 +841,18 @@ nav {
   left: 0;
 }
 
-.solution-support-3 {
+.medium-support-3 {
   margin: 55px 0 0 0;
 }
 
-.solution-support-ls-hover {
+.medium-support-ls-hover {
   width: calc(91.5% + 15px) !important;
   border-left: 7.5vw solid #fff !important;
   border-right: 7.5px solid #00ff19 !important;
 }
 
-.solution-support-2,
-.solution-support-4 {
+.medium-support-2,
+.medium-support-4 {
   background-color: #fff;
   width: 85%;
   margin: 55px 0 0 0;
@@ -942,20 +865,20 @@ nav {
   transform: translate(-41.2%, 0);
 }
 
-.solution-support-rs-hover {
+.medium-support-rs-hover {
   left: calc(50% - 4.3px);
   width: calc(92.5% + 15px);
   border-left: 7.5px solid #00ff19;
   border-right: 7.5vw solid #fff;
 }
 
-.solution-conclusion {
+.medium-conclusion {
   width: 100%;
   margin: 55px 0 0 0;
   padding: 9.5% 2.5% 2% 2.5%;
   text-align: center;
-  background-image: url(img/solution-conclusion.jpg);
-  background-size: cover;
+  background-image: url(img/medium-conclusion.jpg);
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
   position: relative;
@@ -963,11 +886,11 @@ nav {
   transition: all 0.3s;
 }
 
-.solution-conclusion-hover {
+.medium-conclusion-hover {
   transform: scale(1.02);
 }
 
-.solution-conclusion h3 {
+.medium-conclusion h3 {
   width: 50%;
   margin: 0 auto;
   line-height: 1.2rem;
@@ -978,6 +901,14 @@ nav {
   clip-path: polygon(0% 0, 50% 0%, 50% 100%, 0 100%);
   position: relative;
   transform: translate(0, -100%);
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#h3-black {
+  clip-path: polygon(50% 0, 100% 0%, 100% 100%, 50% 100%);
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /*----------------------------------------------- FOOTER ---------------------------------------------------*/
